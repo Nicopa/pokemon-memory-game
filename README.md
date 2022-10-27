@@ -4,6 +4,10 @@ This is a pokemon memory game built in Angular, where instead of searching for e
 
 Try to "find them all" as fast as you can and few errors as possible.
 
+![Screenshot 1](/docs/screenshot1.webp)
+![Screenshot 2](/docs/screenshot2.webp)
+![Screenshot 3](/docs/screenshot3.webp)
+
 ## Table of contents
 
 1. [Requirements](#requirements);
