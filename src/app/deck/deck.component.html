@@ -1,0 +1,5 @@
+<app-card
+	*ngFor="let card of cards; let index = index"
+	[card]="card"
+	(click)="handleCardClick(index)"
+></app-card>

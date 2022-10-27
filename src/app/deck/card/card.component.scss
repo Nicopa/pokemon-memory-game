@@ -1,0 +1,200 @@
+/**
+Based on Johno Witss source code: Fallout 76 CSS Slugger Perk Card
+Link: https://codepen.io/jonnowitts/pen/YdYjmd
+Link access date: Feb 6, 2022
+*/
+// Scene set-up for flipping
+.card-area {
+	width: 100%;
+	height: 100%;
+	perspective: 600px;
+	animation: cardAppear 1.4s forwards;
+}
+
+@keyframes cardAppear {
+	0% {
+		transform: rotate3d(0, 0, 1, 15deg) translate3d(0, -100vh, 0);
+	}
+	30% {
+		transform: rotate3d(0, 0, 0, 0deg) translate3d(0, 0, 0);
+	}
+	65% {
+		transform: rotate3d(0, 0, 0, 0deg) translate3d(0, 0, 0) scale3d(1, 1, 1);
+	}
+	80% {
+		transform: rotate3d(0, 0, 1, -5deg) scale3d(1.05, 1.05, 1);
+	}
+}
+
+.card {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+	animation: cardUnFlip 0.275s forwards linear;
+	cursor: pointer;
+	&.flipped-card {
+		animation: cardFlip 0.275s forwards linear;
+	}
+	&.scored {
+		opacity: 0.5;
+	}
+	&.bug {
+		.card-front {
+			border-color: var(--bug-card-border-color);
+			h1 {
+				color: var(--bug-card-front-title-color);
+				background-color: var(--bug-card-front-title-bg);
+			}
+		}
+	}
+	&.electric {
+		.card-front {
+			border-color: var(--electric-card-border-color);
+			h1 {
+				color: var(--electric-card-front-title-color);
+				background-color: var(--electric-card-front-title-bg);
+			}
+		}
+	}
+	&.fire {
+		.card-front {
+			border-color: var(--fire-card-border-color);
+			h1 {
+				color: var(--fire-card-front-title-color);
+				background-color: var(--fire-card-front-title-bg);
+			}
+		}
+	}
+	&.grass {
+		.card-front {
+			border-color: var(--grass-card-border-color);
+			h1 {
+				color: var(--grass-card-front-title-color);
+				background-color: var(--grass-card-front-title-bg);
+			}
+		}
+	}
+	&.ground {
+		.card-front {
+			border-color: var(--ground-card-border-color);
+			h1 {
+				color: var(--ground-card-front-title-color);
+				background-color: var(--ground-card-front-title-bg);
+			}
+		}
+	}
+	&.ice {
+		.card-front {
+			border-color: var(--ice-card-border-color);
+			h1 {
+				color: var(--ice-card-front-title-color);
+				background-color: var(--ice-card-front-title-bg);
+			}
+		}
+	}
+	&.poison {
+		.card-front {
+			border-color: var(--poison-card-border-color);
+			h1 {
+				color: var(--poison-card-front-title-color);
+				background-color: var(--poison-card-front-title-bg);
+			}
+		}
+	}
+	&.psychic {
+		.card-front {
+			border-color: var(--psychic-card-border-color);
+			h1 {
+				color: var(--psychic-card-front-title-color);
+				background-color: var(--psychic-card-front-title-bg);
+			}
+		}
+	}
+	&.water {
+		.card-front {
+			border-color: var(--water-card-border-color);
+			h1 {
+				color: var(--water-card-front-title-color);
+				background-color: var(--water-card-front-title-bg);
+			}
+		}
+	}
+}
+
+@keyframes cardFlip {
+	0% {
+		transform: rotateZ(0deg) rotateY(180deg);
+	}
+	50% {
+		transform: rotateZ(-10deg) rotateY(90deg);
+	}
+	100% {
+		transform: rotateZ(0deg) rotateY(0deg);
+	}
+}
+
+@keyframes cardUnFlip {
+	0% {
+		transform: rotateZ(0deg) rotateY(0deg);
+	}
+	50% {
+		transform: rotateZ(-10deg) rotateY(90deg);
+	}
+	100% {
+		transform: rotateZ(0deg) rotateY(180deg);
+	}
+}
+
+.card-face {
+	position: absolute;
+	backface-visibility: hidden;
+	border-width: 3px;
+	border-style: solid;
+	border-color: var(--card-border-color);
+	box-shadow: 0 2px 4px 2px #646464;
+	border-radius: 10px;
+	overflow: hidden;
+	height: 100%;
+}
+
+.card-backing {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	transform: rotateY(180deg);
+	background-color: var(--card-back-bg);
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.card-front {
+	display: grid;
+	position: relative;
+	h1 {
+		color: var(--card-front-title-color);
+		background-color: var(--card-front-title-bg);
+		font-size: 100%;
+		text-align: center;
+		letter-spacing: 1px;
+		font-family: var(--card-front-title-font-family);
+	}
+	.main-pane {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+// Reference: https://www.youtube.com/watch?v=hXLSKvmDlC4&t=178s

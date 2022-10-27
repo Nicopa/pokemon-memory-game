@@ -1,0 +1,54 @@
+:root {
+	--card-back-bg: darkblue;
+	--card-front-title-font-family: fantasy;
+
+	//normal type
+	--card-front-title-color: white;
+	--card-front-title-bg: rgb(63, 63, 95);
+	--card-border-color: rgb(10, 10, 10);
+
+	//bug type
+	--bug-card-front-title-color: #020c00;
+	--bug-card-front-title-bg: #7cff01;
+	--bug-card-border-color: #11a304;
+
+	//electric type
+	--electric-card-front-title-color: #1c1d0a;
+	--electric-card-front-title-bg: #d8db03;
+	--electric-card-border-color: #99a304;
+
+	//fire type
+	--fire-card-front-title-color: #ffffff;
+	--fire-card-front-title-bg: #db0303;
+	--fire-card-border-color: #810303;
+
+	//grass type
+	--grass-card-front-title-color: #ffffff;
+	--grass-card-front-title-bg: #016e1c;
+	--grass-card-border-color: #01421a;
+
+	//ground type
+	--ground-card-front-title-color: #ffffff;
+	--ground-card-front-title-bg: #5c4f0a;
+	--ground-card-border-color: #312401;
+
+	//ice type
+	--ice-card-front-title-color: #004154;
+	--ice-card-front-title-bg: #01fdfd;
+	--ice-card-border-color: #03596e;
+
+	//poison type
+	--poison-card-front-title-color: #250925;
+	--poison-card-front-title-bg: #c210e6;
+	--poison-card-border-color: #e9b8f5;
+
+	//psychic type
+	--psychic-card-front-title-color: #ffffff;
+	--psychic-card-front-title-bg: #5d0070;
+	--psychic-card-border-color: #290033;
+
+	//water type
+	--water-card-front-title-color: #ffffff;
+	--water-card-front-title-bg: #033ddb;
+	--water-card-border-color: #1e0380;
+}

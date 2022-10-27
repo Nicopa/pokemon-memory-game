@@ -1,0 +1,601 @@
+{
+	"list": [
+		{
+			"number": 1,
+			"name": "Bulbasaur",
+			"image": "001-bulbasaur.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 2,
+			"name": "Ivysaur",
+			"image": "002-ivysaur.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 3,
+			"name": "Venusaur",
+			"image": "003-venusaur.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 4,
+			"name": "Charmander",
+			"image": "004-charmander.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 5,
+			"name": "Charmeleon",
+			"image": "005-charmeleon.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 6,
+			"name": "Charizard",
+			"image": "006-charizard.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 7,
+			"name": "Squirtle",
+			"image": "007-squirtle.jpg",
+			"type": "water"
+		},
+		{
+			"number": 8,
+			"name": "Wartortle",
+			"image": "008-wartortle.jpg",
+			"type": "water"
+		},
+		{
+			"number": 9,
+			"name": "Blastoise",
+			"image": "009-blastoise.jpg",
+			"type": "water"
+		},
+		{
+			"number": 10,
+			"name": "Caterpie",
+			"image": "010-caterpie.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 11,
+			"name": "Metapod",
+			"image": "011-metapod.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 12,
+			"name": "Butterfree",
+			"image": "012-butterfree.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 13,
+			"name": "Weedle",
+			"image": "013-weedle.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 14,
+			"name": "Kakuna",
+			"image": "014-kakuna.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 15,
+			"name": "Beedrill",
+			"image": "015-beedrill.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 16,
+			"name": "Pidgey",
+			"image": "016-pidgey.jpg",
+			"type": "flying"
+		},
+		{
+			"number": 17,
+			"name": "Pidgeotto",
+			"image": "017-pidgeotto.jpg",
+			"type": "flying"
+		},
+		{
+			"number": 18,
+			"name": "Pidgeot",
+			"image": "018-pidgeot.jpg",
+			"type": "flying"
+		},
+		{
+			"number": 19,
+			"name": "Rattata",
+			"image": "019-rattata.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 20,
+			"name": "Raticate",
+			"image": "020-raticate.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 21,
+			"name": "Spearow",
+			"image": "021-spearow.jpg",
+			"type": "flying"
+		},
+		{
+			"number": 22,
+			"name": "Fearow",
+			"image": "022-fearow.jpg",
+			"type": "flying"
+		},
+		{
+			"number": 23,
+			"name": "Ekans",
+			"image": "023-ekans.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 24,
+			"name": "Arbok",
+			"image": "024-arbok.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 25,
+			"name": "Pikachu",
+			"image": "025-pikachu.jpg",
+			"type": "electric"
+		},
+		{
+			"number": 26,
+			"name": "Raichu",
+			"image": "026-raichu.jpg",
+			"type": "electric"
+		},
+		{
+			"number": 27,
+			"name": "Sandshrew",
+			"image": "027-sandshrew.jpg",
+			"type": "ground"
+		},
+		{
+			"number": 28,
+			"name": "Sandslash",
+			"image": "028-sandslash.jpg",
+			"type": "ground"
+		},
+		{
+			"number": 29,
+			"name": "Nidoran ♀",
+			"image": "029-nidoran-female.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 30,
+			"name": "Nidorina",
+			"image": "030-nidorina.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 31,
+			"name": "Nidoqueen",
+			"image": "031-nidoqueen.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 32,
+			"name": "Nidoran ♂",
+			"image": "032-nidoran-male.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 33,
+			"name": "Nidorino",
+			"image": "033-nidorino.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 34,
+			"name": "Nidoking",
+			"image": "034-nidoking.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 35,
+			"name": "Clefairy",
+			"image": "035-clefairy.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 36,
+			"name": "Clefable",
+			"image": "036-clefable.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 37,
+			"name": "Vulpix",
+			"image": "037-vulpix.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 38,
+			"name": "Ninetales",
+			"image": "038-ninetales.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 39,
+			"name": "Jigglypuff",
+			"image": "039-jigglypuff.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 40,
+			"name": "Wigglytuff",
+			"image": "040-wigglytuff.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 41,
+			"name": "Zubat",
+			"image": "041-zubat.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 42,
+			"name": "Golbat",
+			"image": "042-golbat.jpg",
+			"type": "poison"
+		},
+		{
+			"number": 43,
+			"name": "Oddish",
+			"image": "043-oddish.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 44,
+			"name": "Gloom",
+			"image": "044-gloom.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 45,
+			"name": "Vileplume",
+			"image": "045-vileplume.jpg",
+			"type": "grass"
+		},
+		{
+			"number": 46,
+			"name": "Paras",
+			"image": "046-paras.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 47,
+			"name": "Parasect",
+			"image": "047-parasect.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 48,
+			"name": "Venonat",
+			"image": "048-venonat.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 49,
+			"name": "Venomoth",
+			"image": "049-venomoth.jpg",
+			"type": "bug"
+		},
+		{
+			"number": 50,
+			"name": "Diglett",
+			"image": "050-diglett.jpg",
+			"type": "ground"
+		},
+		{
+			"number": 51,
+			"name": "Dugtrio",
+			"image": "051-dugtrio.jpg",
+			"type": "ground"
+		},
+		{
+			"number": 52,
+			"name": "Meowth",
+			"image": "052-meowth.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 53,
+			"name": "Persian",
+			"image": "053-persian.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 54,
+			"name": "Psyduck",
+			"image": "054-psyduck.jpg",
+			"type": "water"
+		},
+		{
+			"number": 55,
+			"name": "Golduck",
+			"image": "055-golduck.jpg",
+			"type": "water"
+		},
+		{
+			"number": 56,
+			"name": "Mankey",
+			"image": "056-mankey.jpg",
+			"type": "fighting"
+		},
+		{
+			"number": 57,
+			"name": "Primeape",
+			"image": "057-primeape.jpg",
+			"type": "fighting"
+		},
+		{
+			"number": 58,
+			"name": "Growlithe",
+			"image": "058-growlithe.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 59,
+			"name": "Arcanine",
+			"image": "059-arcanine.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 60,
+			"name": "Poliwag",
+			"image": "060-poliwag.jpg",
+			"type": "water"
+		},
+		{
+			"number": 61,
+			"name": "Poliwhirl",
+			"image": "061-poliwhirl.jpg",
+			"type": "water"
+		},
+		{
+			"number": 62,
+			"name": "Poliwrath",
+			"image": "062-poliwrath.jpg",
+			"type": "water"
+		},
+		{
+			"number": 63,
+			"name": "Abra",
+			"image": "063-abra.jpg",
+			"type": "psychic"
+		},
+		{
+			"number": 64,
+			"name": "Kadabra",
+			"image": "064-kadabra.jpg",
+			"type": "psychic"
+		},
+		{
+			"number": 65,
+			"name": "Alakazam",
+			"image": "065-alakazam.jpg",
+			"type": "psychic"
+		},
+		{
+			"number": 66,
+			"name": "Machop",
+			"image": "066-machop.jpg",
+			"type": "fighting"
+		},
+		{
+			"number": 67,
+			"name": "Machoke",
+			"image": "067-machoke.jpg",
+			"type": "fighting"
+		},
+		{
+			"number": 68,
+			"name": "Machamp",
+			"image": "068-machamp.jpg",
+			"type": "fighting"
+		},
+		{
+			"number": 95,
+			"name": "Onix",
+			"image": "095-onix.jpg",
+			"type": "rock"
+		},
+		{
+			"number": 113,
+			"name": "Chansey",
+			"image": "113-chansey.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 120,
+			"name": "Staryu",
+			"image": "120-staryu.jpg",
+			"type": "water"
+		},
+		{
+			"number": 121,
+			"name": "Starmie",
+			"image": "121-starmie.jpg",
+			"type": "water"
+		},
+		{
+			"number": 122,
+			"name": "Mr. Mime",
+			"image": "122-mr-mime.jpg",
+			"type": "psychic"
+		},
+		{
+			"number": 128,
+			"name": "Tauros",
+			"image": "128-tauros.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 132,
+			"name": "Ditto",
+			"image": "132-ditto.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 133,
+			"name": "Eevee",
+			"image": "133-eevee.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 134,
+			"name": "Vaporeon",
+			"image": "134-vaporeon.jpg",
+			"type": "water"
+		},
+		{
+			"number": 135,
+			"name": "Jolteon",
+			"image": "135-jolteon.jpg",
+			"type": "electric"
+		},
+		{
+			"number": 136,
+			"name": "Flareon",
+			"image": "136-flareon.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 143,
+			"name": "Snorlax",
+			"image": "143-snorlax.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 144,
+			"name": "Articuno",
+			"image": "144-articuno.jpg",
+			"type": "ice"
+		},
+		{
+			"number": 145,
+			"name": "Zapdos",
+			"image": "145-zapdos.jpg",
+			"type": "electric"
+		},
+		{
+			"number": 146,
+			"name": "Moltres",
+			"image": "146-moltres.jpg",
+			"type": "fire"
+		},
+		{
+			"number": 147,
+			"name": "Dratini",
+			"image": "147-dratini.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 148,
+			"name": "Dragonair",
+			"image": "148-dragonair.jpg",
+			"type": "normal"
+		},
+		{
+			"number": 149,
+			"name": "Dragonite",
+			"image": "149-dragonite.jpg",
+			"type": "normal"
+		}
+	],
+	"evolutions": [
+		[1, 2, 3],
+		[4, 5, 6],
+		[7, 8, 9],
+		[10, 11, 12],
+		[13, 14, 15],
+		[16, 17, 18],
+		[19, 20],
+		[21, 22],
+		[23, 24],
+		[25, 26],
+		[27, 28],
+		[29, 30, 31],
+		[32, 33, 34],
+		[35, 36],
+		[37, 38],
+		[39, 40],
+		[41, 42],
+		[43, 44, 45],
+		[46, 47],
+		[48, 49],
+		[50, 51],
+		[52, 53],
+		[54, 55],
+		[56, 57],
+		[58, 59],
+		[60, 61, 62],
+		[63, 64, 65],
+		[66, 67, 68],
+		[69, 70, 71],
+		[72, 73],
+		[74, 75, 76],
+		[77, 78],
+		[79, 80],
+		[81, 82],
+		[83],
+		[84, 85],
+		[86, 87],
+		[88, 89],
+		[90, 91],
+		[92, 93, 94],
+		[95],
+		[96, 97],
+		[98, 99],
+		[100, 101],
+		[102, 103],
+		[104, 105],
+		[106],
+		[107],
+		[108],
+		[109, 110],
+		[111, 112],
+		[113],
+		[114],
+		[115],
+		[116, 117],
+		[118, 119],
+		[120, 121],
+		[122],
+		[123],
+		[124],
+		[125],
+		[126],
+		[127],
+		[128],
+		[129, 130],
+		[131],
+		[132],
+		[133, 134, 135, 136],
+		[137],
+		[138, 139],
+		[140, 141],
+		[142],
+		[143],
+		[144],
+		[145],
+		[146],
+		[147, 148, 149],
+		[150],
+		[151]
+	]
+}

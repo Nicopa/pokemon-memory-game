@@ -1,0 +1,25 @@
+<header>
+	<h1>Pokemon Memory Game</h1>
+	<p>
+		Instead of trying to search for the same pairs, search the evolution lines of
+		each pokemon of the first generation.<br />
+		Example: Charmander -> Charmeleon -> Charizard (* Pokemons without evolution
+		count as a score)
+	</p>
+	<button (click)="newGame()">New Game</button>
+</header>
+<main>
+	<app-deck (failEvent)="onFail()" (scoreEvent)="onWin()"></app-deck>
+</main>
+<div *ngIf="isPlaying" class="player-bar">
+	<div class="fails section">Fails: {{ fails }}</div>
+	<div class="timer section">Timer: <app-timer #timer></app-timer></div>
+</div>
+<app-modal
+	*ngIf="showEndGameModal"
+	[title]="'Congratulations'"
+	[content]="
+		'You finished the game in ' + duration + ' with ' + fails + ' fails.'
+	"
+	[buttons]="endGameModalButtons"
+></app-modal>

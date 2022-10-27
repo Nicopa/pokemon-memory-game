@@ -1,0 +1,20 @@
+<div class="card-area">
+	<div
+		[ngClass]="{ card: true, 'flipped-card': card?.faceUp, scored: card?.scored }"
+		[className]="card?.type"
+	>
+		<div class="card-face card-backing">
+			<img
+				src="assets/images/pokeball.png.w600.h400.webp"
+				alt="{{ card?.name }}"
+			/>
+		</div>
+		<div class="card-face card-front">
+			<h1>{{ card?.name }}</h1>
+			<div class="main-pane">
+				<img src="assets/images/{{ card?.image }}" alt="{{ card?.name }}" />
+			</div>
+			<div class="grain-overlay"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+/* Box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/* Margins */
+* {
+	margin: 0;
+}
+/* Heights */
+html,
+body {
+	height: 100vh;
+}
+/* Text rendering */
+body {
+	-webkit-font-smoothing: antialiased;
+}
+/* Typography */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/* Lists */
+ol,
+ul {
+	list-style: none;
+}
+/* Underlines */
+a {
+	text-decoration: none;
+}
+/* Colors */
+* {
+	color: inherit;
+}
+/* Font-weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
