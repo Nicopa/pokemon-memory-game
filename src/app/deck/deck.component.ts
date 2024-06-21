@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Card } from './card/card.component';
 import pokemons from 'src/assets/pokemon-list.json';
 
@@ -13,7 +13,7 @@ export class DeckComponent {
 		faceUp: true,
 		scored: false,
 	}));
-	selectedPokemons: Array<number> = [];
+	selectedPokemons: Array<{ index: number; pokemonNumber: number; }> = [];
 	canPlay: boolean = false;
 	flipCardAudio = new Audio('../../assets/sounds/flip_card.mp3');
 	@Output() failEvent = new EventEmitter();
@@ -58,12 +58,6 @@ export class DeckComponent {
 	shuffleCards() {
 		let currentIndex = this.cards.length;
 		let randomIndex;
-
-		/* this.cards.forEach((card) => {
-			card.faceUp = true;
-			card.scored = false;
-		}); */
-
 		while (currentIndex != 0) {
 			randomIndex = Math.floor(Math.random() * currentIndex);
 			currentIndex--;
@@ -78,18 +72,22 @@ export class DeckComponent {
 		if (this.canPlay && !this.cards[index].scored) {
 			this.cards[index].faceUp = true;
 			this.flipCardAudio.play();
-			if (!this.selectedPokemons.includes(this.cards[index].number))
-				this.selectedPokemons.push(this.cards[index].number);
+			if (!this.selectedPokemons.find((pokemon) => pokemon.index === index))
+				this.selectedPokemons.push({
+				index,
+				pokemonNumber: this.cards[index].number
+			});
 			this.checkEvolution();
 		}
 	}
 
-	flipDownRevealedCards() {
+	flipDownRevealedCards(indexes: number[]) {
 		this.failEvent.emit();
 		this.canPlay = false;
 		setTimeout(() => {
-			this.cards.forEach((card) => {
-				if (!card.scored) card.faceUp = false;
+			indexes.forEach((index) => {
+				if (!this.cards[index].scored)
+					this.cards[index].faceUp = false;
 			});
 			this.canPlay = true;
 		}, 2000);
@@ -101,12 +99,6 @@ export class DeckComponent {
 		});
 	}
 
-	/* flipUpCards() {
-		this.cards.forEach((card) => {
-			card.faceUp = true;
-		});
-	} */
-
 	scoreCards() {
 		this.cards.forEach((card) => {
 			if (card.faceUp && !card.scored) card.scored = true;
@@ -116,21 +108,21 @@ export class DeckComponent {
 	}
 
 	checkEvolution() {
-		if (this.selectedPokemons.length > 0) {
-			for (let i = 0; i < pokemons.evolutions.length; i++) {
-				if (pokemons.evolutions[i].includes(this.selectedPokemons[0])) {
-					for (let j = 1; j < this.selectedPokemons.length; j++) {
-						if (!pokemons.evolutions[i].includes(this.selectedPokemons[j])) {
-							this.flipDownRevealedCards();
-							this.clearSelections();
-						}
-					}
-					if (pokemons.evolutions[i].length == this.selectedPokemons.length) {
-						this.scoreCards();
+		if (!this.selectedPokemons.length) return;
+		for (const evolution of pokemons.evolutions) {
+			if (evolution.includes(this.selectedPokemons[0].pokemonNumber)) {
+				for (let j = 1; j < this.selectedPokemons.length; j++) {
+					if (!evolution.includes(this.selectedPokemons[j].pokemonNumber)) {
+						this.flipDownRevealedCards(this.selectedPokemons.map((pokemon) => pokemon.index));
 						this.clearSelections();
+						return;
 					}
-					return;
 				}
+				if (evolution.length === this.selectedPokemons.length) {
+					this.scoreCards();
+					this.clearSelections();
+				}
+				return;
 			}
 		}
 	}

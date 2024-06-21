@@ -44,9 +44,9 @@ export class TimerComponent {
 
 	getTime() {
 		let time = '';
-		if (this.hours) time += this.hours.toString() + ' hours, ';
-		if (this.minutes) time += this.minutes.toString() + ' minutes and ';
-		time += this.seconds.toString() + ' seconds';
+		if (this.hours) time += this.hours.toString() + ` hours${this.hours > 1 ? 's' : ''} `;
+		if (this.minutes) time += this.minutes.toString() + ` minute${this.minutes > 1 ? 's' : ''} and `;
+		time += this.seconds.toString() + ` second${this.seconds > 1 ? 's' : ''}`;
 		return time;
 	}
 }
