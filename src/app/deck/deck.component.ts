@@ -15,7 +15,7 @@ export class DeckComponent {
 	}));
 	selectedPokemons: Array<{ index: number; pokemonNumber: number; }> = [];
 	canPlay: boolean = false;
-	flipCardAudio = new Audio('../../assets/sounds/flip_card.mp3');
+	flipCardAudio = new Audio('./assets/sounds/flip_card.mp3');
 	@Output() failEvent = new EventEmitter();
 	@Output() scoreEvent = new EventEmitter();
 

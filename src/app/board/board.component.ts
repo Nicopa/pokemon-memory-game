@@ -22,8 +22,8 @@ export class BoardComponent implements OnInit {
 	duration!: string;
 	isPlaying: boolean = false;
 	showEndGameModal: boolean = false;
-	newGameAudio = new Audio('../../assets/sounds/new_game.mp3');
-	winAudio = new Audio('../../assets/sounds/win.mp3');
+	newGameAudio = new Audio('./assets/sounds/new_game.mp3');
+	winAudio = new Audio('./assets/sounds/win.mp3');
 	endGameModalButtons: Array<ModalButton> = [
 		{
 			label: 'Close',
