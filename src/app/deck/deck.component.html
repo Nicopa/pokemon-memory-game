@@ -1,5 +1,5 @@
 <app-card
-	*ngFor="let card of cards; let index = index"
+	*ngFor="let card of gameService.cards; let index = index"
 	[card]="card"
-	(click)="handleCardClick(index)"
+	(click)="gameService.onCardClick(index)"
 ></app-card>

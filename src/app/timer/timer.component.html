@@ -1,5 +1,5 @@
-<span class="hours">{{ (hours < 10 ? "0" : "") + hours.toString() }}</span
->:<span class="hours">{{ (minutes < 10 ? "0" : "") + minutes.toString() }}</span
+<span class="hours">{{ (timerService.hours < 10 ? "0" : "") + timerService.hours.toString() }}</span
+>:<span class="hours">{{ (timerService.minutes < 10 ? "0" : "") + timerService.minutes.toString() }}</span
 >:<span class="hours">{{
-	(seconds < 10 ? "0" : "") + seconds.toString()
+	(timerService.seconds < 10 ? "0" : "") + timerService.seconds.toString()
 }}</span>

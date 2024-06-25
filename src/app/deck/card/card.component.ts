@@ -1,13 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-export type Card = {
-	number: number;
-	name: string;
-	image: string;
-	type: string;
-	faceUp: boolean;
-	scored: boolean;
-};
+import { Component, Input } from '@angular/core';
+import { Card } from 'src/app/game/card';
 
 @Component({
 	selector: 'app-card',
@@ -15,7 +7,5 @@ export type Card = {
 	styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-	constructor() {}
-
 	@Input() card: Card | null = null;
 }

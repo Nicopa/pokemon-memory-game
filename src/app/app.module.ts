@@ -16,7 +16,7 @@ import { TimerComponent } from './timer/timer.component';
 		CardComponent,
 		ModalComponent,
 		DeckComponent,
-  TimerComponent,
+  		TimerComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],

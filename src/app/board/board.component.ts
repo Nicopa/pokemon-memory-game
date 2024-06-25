@@ -1,8 +1,6 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ModalButton } from '../modal/modal.component';
-import { DeckComponent } from '../deck/deck.component';
-import { TimerComponent } from '../timer/timer.component';
-import { ActivatedRoute } from '@angular/router';
+import { GameService } from '../game/game.service';
 
 @Component({
 	selector: 'app-board',
@@ -10,73 +8,53 @@ import { ActivatedRoute } from '@angular/router';
 	styleUrls: ['./board.component.scss'],
 })
 export class BoardComponent implements OnInit {
-	@ViewChild(DeckComponent) deck!: DeckComponent;
-	private _timer!: TimerComponent;
-	@ViewChild('timer') set timer(value: TimerComponent) {
-		if (value) {
-			this._timer = value;
-			this._timer.start();
-		}
+	showEndGameModal = false;
+	showHeader = true;
+	gameIsActive = false;
+	@HostBinding('class') class = '';
+	readonly audio = {
+		flipCard: new Audio('./assets/sounds/flip_card.mp3'),
+		newGame: new Audio('./assets/sounds/new_game.mp3'),
+		win: new Audio('./assets/sounds/win.mp3'),
+	};
+	constructor(readonly gameService: GameService) {}
+	ngOnInit(): void {
+		this.gameService.newGameStartedEvent.subscribe(() => {
+			this.audio.newGame.play();
+		});
+		this.gameService.cardFlippedUpEvent.subscribe(() => {
+			this.audio.flipCard.play();
+		});
+		this.gameService.wonEvent.subscribe(() => {
+			this.showEndGameModal = true;
+			this.audio.win.play();
+		});
 	}
-	fails!: number;
-	duration!: string;
-	isPlaying: boolean = false;
-	showEndGameModal: boolean = false;
-	newGameAudio = new Audio('./assets/sounds/new_game.mp3');
-	winAudio = new Audio('./assets/sounds/win.mp3');
+	setGameActive() {
+		this.gameIsActive = true;
+		this.class = 'game-active';
+	}
+	setGameInactive() {
+		this.gameIsActive = false;
+		this.class = '';
+	}
 	endGameModalButtons: Array<ModalButton> = [
 		{
 			label: 'Close',
 			callback: () => {
+				this.setGameInactive();
+				this.showHeader = true;
 				this.showEndGameModal = false;
 			},
 		},
 	];
-	constructor(private activatedRoute: ActivatedRoute) {}
-	ngOnInit(): void {
-		console.log(this.activatedRoute.snapshot.data);
-		setTimeout(
-			() => console.log(this.activatedRoute.snapshot.data['sounds']),
-			3000
-		);
-		// this.audio.src = this.activatedRoute.snapshot.data['sounds'].newGame;
+	onNewGameClick() {
+		this.gameService.startNewGame();
+		this.setGameActive();
+		this.showHeader = false;
+		this.showEndGameModal = false;
 	}
-	newGame() {
-		this.deck.setRandomCards(30);
-		this.deck.shuffleCards();
-		this.fails = 0;
-		if (this._timer) {
-			this._timer.stop();
-			this._timer.reset();
-		}
-		this.newGameAudio.play();
-		setTimeout(() => {
-			this.deck.flipDownAllCards();
-			this.deck.canPlay = true;
-			this.isPlaying = true;
-			if (this._timer) this._timer.start();
-		}, 4000);
-	}
-
-	onFail() {
-		this.fails++;
-	}
-
-	onWin() {
-		if (this.checkEndGame()) {
-			this.winAudio.play();
-			this.showEndGameModal = true;
-			this.deck.canPlay = false;
-		}
-	}
-
-	checkEndGame() {
-		for (let i = 0; i < this.deck.cards.length; i++) {
-			if (!this.deck.cards[i].scored) return false;
-		}
-		this.isPlaying = false;
-		this._timer.stop();
-		this.duration = this._timer.getTime();
-		return true;
+	onCollapseClick() {
+		this.showHeader = !this.showHeader;
 	}
 }
